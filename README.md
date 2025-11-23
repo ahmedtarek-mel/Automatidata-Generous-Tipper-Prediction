@@ -2,9 +2,9 @@
 [![Python](https://img.shields.io/badge/Python-3.10-blue.svg)]()  
 [![Framework](https://img.shields.io/badge/Model-RandomForest-success)]()  
 ![License](https://img.shields.io/badge/License-MIT-green.svg)  
-![Build](https://img.shields.io/badge/Build-Passing-brightgreen)]()
-![Repo Size](https://img.shields.io/github/repo-size/ahmedtarek-mel/Automatidata-Generous-Tipper-Prediction)]()
-![Stars](https://img.shields.io/github/stars/ahmedtarek-mel/Automatidata-Generous-Tipper-Prediction?style=social)]()
+![Build](https://img.shields.io/badge/Build-Passing-brightgreen)]()  
+![Repo Size](https://img.shields.io/github/repo-size/ahmedtarek-mel/Automatidata-Generous-Tipper-Prediction)]()  
+![Stars](https://img.shields.io/github/stars/ahmedtarek-mel/Automatidata-Generous-Tipper-Prediction?style=social)]()  
 
 ---
 
