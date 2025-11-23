@@ -27,8 +27,7 @@ This project builds:
 ├── notebooks/
 │   └── Automatidata_Project.ipynb
 ├── reports/
-│   ├── Automatidata_Executive_Summary.pptx
-│   └──PACE_Strategy_Document.docs
+│    ├── Automatidata_Executive_Summary.pptx
 └── README.md
 ```
 
@@ -150,5 +149,5 @@ Potential expansions:
 ## 📎 Files Created
 
 - `Automatidata_Executive_Summary.pptx`  
-- `README.md` (this file)
+- `README.md`
 
