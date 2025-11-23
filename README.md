@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="https://github.com/ahmedtarek-mel/Automatidata-Generous-Tipper-Prediction/blob/main/notebooks/screenshots/Banner_.png" width="100%" />
+</p>
+https://github.com/ahmedtarek-mel/Automatidata-Generous-Tipper-Prediction/blob/main/notebooks/screenshots/Banner_.png
 # 🟨 NYC TLC Generous Tipper Prediction — Automatidata Project  
 [![Python](https://img.shields.io/badge/Python-3.10-blue.svg)]()  
 [![Framework](https://img.shields.io/badge/Model-RandomForest-success)]()  
