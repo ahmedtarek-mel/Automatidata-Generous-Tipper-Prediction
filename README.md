@@ -13,8 +13,8 @@
 
 ---
 ## 🚕 Project Overview  
-This repository contains the complete end-to-end ML project completed for the  
-**Google Advanced Data Analytics Certificate — Course 6 (Machine Learning)**.
+Build a predictive machine learning model capable of identifying whether a taxi rider is likely to leave a generous tip (≥20%).
+Understanding tipping patterns enables TLC to enhance driver earnings strategies, operational planning, and overall customer experience.
 
 The goal:  
 ➡️ **Predict whether a NYC taxi rider will be a "generous tipper" (tip ≥ 20%)**  
@@ -27,8 +27,6 @@ Deliverables include:
 - Baseline & tuned Random Forest models  
 - Feature importance insights  
 - Business-ready Executive Summary (PPTX)
-
-This is a *portfolio-quality* project designed to reflect real-world ML workflow.
 
 ---
 
