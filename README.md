@@ -1,21 +1,31 @@
-
-# 🟨 NYC TLC Generous Tipper Prediction — Automatidata Project
-
-This repository contains the full end-to-end machine learning project completed for the **Google Advanced Data Analytics Certificate — Course 6 (Machine Learning)**. 
-The goal is to predict whether a NYC taxi rider will be a **generous tipper (tip ≥ 20%)** using 2017 Yellow Taxi trip data.
+# 🟨 NYC TLC Generous Tipper Prediction — Automatidata Project  
+[![Python](https://img.shields.io/badge/Python-3.10-blue.svg)]()  
+[![Framework](https://img.shields.io/badge/Model-RandomForest-success)]()  
+![License](https://img.shields.io/badge/License-MIT-green.svg)  
+![Build](https://img.shields.io/badge/Build-Passing-brightgreen)]()  
+![Last Commit](https://img.shields.io/github/last-commit/ahmedtarek-mel/Automatidata-Generous-Tipper-Prediction)]()  
+![Repo Size](https://img.shields.io/github/repo-size/ahmedtarek-mel/Automatidata-Generous-Tipper-Prediction)]()  
+![Stars](https://img.shields.io/github/stars/ahmedtarek-mel/Automatidata-Generous-Tipper-Prediction?style=social)]()  
 
 ---
 
-## 🚕 Project Overview
+## 🚕 Project Overview  
+This repository contains the complete end-to-end ML project completed for the  
+**Google Advanced Data Analytics Certificate — Course 6 (Machine Learning)**.
 
-The NYC Taxi & Limousine Commission (TLC) partnered with Automatidata to identify patterns in tipping behavior and develop a predictive machine-learning model.  
-This project builds:
+The goal:  
+➡️ **Predict whether a NYC taxi rider will be a "generous tipper" (tip ≥ 20%)**  
+using 2017 Yellow Taxi trip data.
 
-- A cleaned and engineered dataset  
-- Exploratory Data Analysis (EDA)  
+Deliverables include:
+
+- Cleaned & engineered dataset  
+- Full EDA  
 - Baseline & tuned Random Forest models  
-- Feature importance interpretation  
-- Executive Summary for business stakeholders  
+- Feature importance insights  
+- Business-ready Executive Summary (PPTX)
+
+This is a *portfolio-quality* project designed to reflect real-world ML workflow.
 
 ---
 
@@ -23,36 +33,44 @@ This project builds:
 
 ```
 ├── data/
-│   └── 2017_Yellow_Taxi_Trip_Data.csv
+│ └── 2017_Yellow_Taxi_Trip_Data.csv 
+│
 ├── notebooks/
-│   └── Automatidata_Project.ipynb
+│ └── Automatidata_Project.ipynb
+│ └── screenshots/ (plots & outputs)
+│
 ├── reports/
-│    ├── Automatidata_Executive_Summary.pptx
+│ └── Automatidata_Executive_Summary.pptx
+│
+├── environment/
+│ └── requirements.txt
+│
 └── README.md
 ```
 
+
 ---
 
-## 📊 Dataset
+## 📊 Dataset  
+Dataset: **NYC 2017 Yellow Taxi Trips**  
+Key fields used:
 
-The project uses the **2017 NYC Yellow Taxi Trip Dataset**.  
-Key features include:
-
-- Trip distance & duration  
-- Fare, tolls, surcharges  
-- Pickup/dropoff datetimes  
-- Location IDs  
+- Trip distance  
+- Trip duration (engineered)  
+- Fare, surcharges, tolls  
+- Pickup/dropoff timestamps  
 - Payment type  
-- Engineered features (tip %, trip duration, etc.)
+- Engineered feature: `tip_percent`  
+- Binary target: `generous_tip`  
 
-The target variable:
+Target definition:
 
 ```
-generous_tip = 1 (tip ≥ 20%)
-generous_tip = 0 (tip < 20%)
+1 → generous tip ≥ 20%
+0 → tip < 20%
 ```
 
-Dataset is balanced: ~50% generous, ~50% not generous.
+Balanced data (~50% generous / ~50% not generous).
 
 ---
 
@@ -60,23 +78,23 @@ Dataset is balanced: ~50% generous, ~50% not generous.
 
 ### 1️⃣ Data Cleaning
 - Removed negative fares/distances  
-- Removed invalid durations (>180 minutes)  
-- Converted timestamps  
-- One-hot encoding of categorical variables  
+- Removed invalid durations (>180 min)  
+- Converted timestamp fields to datetime  
+- Filtered impossible or corrupted trips  
 
 ### 2️⃣ Feature Engineering
-- tip_percent  
-- generous_tip (binary target)  
-- trip_duration_min  
-- pickup_hour, pickup_day, pickup_month  
+- `tip_percent`  
+- `trip_duration_min`  
+- `generous_tip` target  
+- `pickup_hour`, `pickup_day`, `pickup_month`  
 
 ### 3️⃣ Modeling
-Two Random Forest models were built:
+Built **two Random Forest models**:
 
-- **Baseline Model**  
-- **Tuned Model** (GridSearchCV)
+- Baseline RF  
+- Tuned RF (GridSearchCV)
 
-### 4️⃣ Evaluation Metrics
+### 4️⃣ Metrics Evaluated
 - Accuracy  
 - Precision  
 - Recall  
@@ -88,66 +106,105 @@ Two Random Forest models were built:
 ## 🧪 Model Performance
 
 ### **Baseline Random Forest**
-- Accuracy: 90.5%  
-- Precision: 84.2%  
-- Recall: 99.4%  
-- F1 Score: 91.1%
+| Metric | Score |
+|--------|--------|
+| Accuracy | 90.5% |
+| Precision | 84.2% |
+| Recall | 99.4% |
+| F1 Score | 91.1% |
 
 ### **Tuned Random Forest**
-- Accuracy: **97.87%**  
-- Precision: **96.65%**  
-- Recall: **99.09%**  
-- F1 Score: **97.86%**
+| Metric | Score |
+|--------|--------|
+| **Accuracy** | **97.87%** |
+| **Precision** | **96.65%** |
+| **Recall** | **99.09%** |
+| **F1 Score** | **97.86%** |
 
-The tuned model offers exceptional predictive performance.
+The tuned model shows exceptional predictive power.
 
 ---
 
-## 🔍 Feature Importance Insights
+# 🔍 Feature Importance Insights
 
 Top predictors of generous tipping:
 
 1. **payment_type**  
 2. **total_amount**  
 3. **fare_amount**  
-4. **extra (surcharges)**  
-5. trip_distance  
-6. trip_duration_min  
-7. pickup_hour  
-8. pickup/dropoff zones  
+4. **extra** (surcharges)  
+5. `trip_distance`  
+6. `trip_duration_min`  
+7. `pickup_hour`  
+8. Pickup/dropoff location zones  
 
-Main insight:  
-> Credit card riders + long/high-value trips = most generous tippers.
+**Key insight:**  
+> Riders paying by credit card on longer, higher-value trips are the most generous tippers.
 
 ---
 
-## 🧩 Executive Summary
+# 📘 MODEL CARD
 
-A full business-facing Executive Summary is provided in:  
-`reports/Automatidata_Executive_Summary.pptx`
+## 🛄 Model Name  
+**Random Forest Classifier — Generous Tipper Prediction**
 
-It includes:
-- Business objective  
+## 🎯 Intended Use  
+- Predict tipping behavior in NYC taxi trips  
+- Assist TLC & app developers with fare/tipping insights  
+- Power driver-facing tools showing likelihood of generous tipping  
+
+## 🚫 Out-of-Scope  
+- Predicting human emotions or financial status  
+- Non-NYC taxi data  
+- Predicting exact dollar amount of tip  
+
+## 🧠 Model Details  
+- Algorithm: RandomForestClassifier  
+- Framework: Scikit-Learn  
+- Hyperparameter tuning: GridSearchCV  
+- Evaluation: Train/validation/test split  
+
+## 📈 Performance Summary  
+- High accuracy (97.9%)  
+- Excellent recall (99%)  
+- Very low false negatives  
+- Minimal bias between classes  
+
+## ⚠️ Ethical Considerations  
+- Should not be used for fare discrimination  
+- Should not alter fare charges for specific riders  
+- Must be communicated as a statistical prediction  
+
+---
+
+# 🧩 Executive Summary  
+Full business-facing Executive Summary:  
+➡️ `reports/Automatidata_Executive_Summary.pptx`
+
+Includes:
+
+- Client objectives  
 - Modeling approach  
-- Final metrics  
-- Key insights  
+- Performance metrics  
+- Insights  
 - Recommendations for TLC  
 
 ---
 
-## 🚀 Future Work
-
-Potential expansions:
-
-- Add weather & traffic features  
+# 🚀 Future Work  
+- Add weather & traffic data  
 - Try XGBoost or LightGBM  
-- Build real-time prediction API  
-- Deploy via Docker / Cloud  
+- Deploy real-time API  
+- Build dashboard for TLC  
+- Add SHAP explainability  
 
 ---
 
-## 📎 Files Created
-
+# 📎 Files Included  
+- `Automatidata_Project.ipynb`  
 - `Automatidata_Executive_Summary.pptx`  
-- `README.md`
+- `requirements.txt`  
+
+---
+
 
