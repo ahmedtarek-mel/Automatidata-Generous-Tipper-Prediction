@@ -1,17 +1,17 @@
 <p align="center">
-  <img src="https://github.com/ahmedtarek-mel/Automatidata-Generous-Tipper-Prediction/blob/main/notebooks/screenshots/Banner_.png" width="100%" />
-</p>  
----
+  <img src="https://raw.githubusercontent.com/ahmedtarek-mel/Automatidata-Generous-Tipper-Prediction/main/notebooks/screenshots/Banner_.png" width="100%">
+</p>
+
 # 🟨 NYC TLC Generous Tipper Prediction — Automatidata Project  
-[![Python](https://img.shields.io/badge/Python-3.10-blue.svg)]()  
-[![Framework](https://img.shields.io/badge/Model-RandomForest-success)]()  
-![License](https://img.shields.io/badge/License-MIT-green.svg)  
-![Build](https://img.shields.io/badge/Build-Passing-brightgreen)     
-![Repo Size](https://img.shields.io/github/repo-size/ahmedtarek-mel/Automatidata-Generous-Tipper-Prediction)  
-![Stars](https://img.shields.io/github/stars/ahmedtarek-mel/Automatidata-Generous-Tipper-Prediction?style=social)  
+
+[![Python](https://img.shields.io/badge/Python-3.10-blue.svg)]()
+[![Framework](https://img.shields.io/badge/Model-RandomForest-success)]()
+![License](https://img.shields.io/badge/License-MIT-green.svg)
+![Build](https://img.shields.io/badge/Build-Passing-brightgreen)
+![Repo Size](https://img.shields.io/github/repo-size/ahmedtarek-mel/Automatidata-Generous-Tipper-Prediction)
+![Stars](https://img.shields.io/github/stars/ahmedtarek-mel/Automatidata-Generous-Tipper-Prediction?style=social)
 
 ---
-
 ## 🚕 Project Overview  
 This repository contains the complete end-to-end ML project completed for the  
 **Google Advanced Data Analytics Certificate — Course 6 (Machine Learning)**.
